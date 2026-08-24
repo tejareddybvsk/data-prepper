@@ -24,7 +24,8 @@ public enum DlqCodec {
                 return codec;
             }
         }
-        throw new IllegalArgumentException("Unknown DLQ codec: " + option);
+        throw new IllegalArgumentException(
+            "Unknown DLQ codec: " + option + ". Only json and ndjson are supported.");
     }
 
     public String getExtension() {

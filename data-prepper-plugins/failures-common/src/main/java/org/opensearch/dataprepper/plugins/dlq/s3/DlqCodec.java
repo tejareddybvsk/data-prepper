@@ -20,7 +20,7 @@ public enum DlqCodec {
     @JsonCreator
     public static DlqCodec fromOptionValue(final String option) {
         for (final DlqCodec codec : values()) {
-            if (codec.option.equalsIgnoreCase(option)) {
+            if (codec.option.equals(option)) {
                 return codec;
             }
         }
